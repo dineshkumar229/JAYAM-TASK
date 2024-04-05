@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        html,body{
+            margin: 0px;
+            padding: 0;
+        }
+        body{
+            overflow-x: hidden;
+        }
+        #head{
+            background-color: rgba(128, 0, 128, 0.584);
+        }
+        #lgo{
+            width: 270px;
+            padding-left: 10px;
+        }
+        #none{
+            display: flex;
+            flex-flow: row-reverse;
+            transform: translate(-1%,-35px);
+            text-decoration: none;
+            ;
+            
+        }
+        li{
+            margin-left: 4%;
+            text-decoration: none;
+        }
+        img{
+            display: inline-block;
+        }
+        #para1{
+            float: inline-end;
+            transform: translate(-40px,-25px);
+        }
+        #logo{
+            background-color: aqua;
+            height: 50px;
+        }
+        #img1{
+            width:100%;
+            height:300px;
+            position: absolute;
+            z-index: -1;
+            margin-top: 0%;
+        }
+        #image1{
+            margin-left: 7%;
+            margin-top:7%;
+        }
+        #para2{
+            transform: translate(50px,185px);
+            text-decoration-line: underline;
+            text-decoration-color: green;
+        }
+        #row{
+            background-color: lightcoral;
+            transform: translateY(130px);
+            height:fit-content;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 5%;
+            margin-top: 6%;
+           
+        }
+        #img2{
+            height: 100%;
+        }
+        #img3{
+            margin-top: 2%;
+            margin-bottom: 6%;
+            display: flex;
+            flex-wrap: wrap;
+            transform: translate(0px,75px);
+            padding-top: 5%;
+        }
+        #bg{
+            width: 100%;
+            height:300px;
+            background-color: blueviolet;
+            justify-content: center;
+            align-items: center;
+            transform: translateY(50px);
+        }
+        #bg2{
+            /* width: 200px;
+            z-index: 1; */
+            /* margin: 10%; */
+            margin-top: 2%;
+        }
+        #small{
+            transform: translateX(-45px);
+        }
+        #btn2{
+            margin-left: 25%;
+        }
+        #address{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: start;
+        }
+        #foot{
+            color:white;
+        }
+        #button1{
+            background-color: yellow;
+            border-radius: 15px;
+            margin-left: 3%;
+        }
+        #summary1,#summary2,#summary3{
+            margin-bottom: 2%;
+            font-style: oblique;
+        }
+        #paragraph{
+            font-family: fantasy;
+        }
+        #small{
+            font-size: small;
+            font-weight: bold;
+            font-style: italic;
+        }
+        #contact{
+            padding-top: 5%;
+        }
+
+
+        .slider {
+        width: 500px;
+        height: 300px;
+        background-color: yellow;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        text-align: center;
+        overflow: hidden;
+      }
+      .image-container {
+        width: 1500px;
+        background-color: pink;
+        height: 300px;
+        clear: both;
+        position: relative;
+        -webkit-transition: left 2s;
+        -moz-transition: left 2s;
+        -o-transition: left 2s;
+        transition: left 2s;
+      }
+      #topbar{
+        padding-left: 15px;
+      }
+      .slide {
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+      }
+      #slide-1:target ~ .image-container {
+        left: 0px;
+      }
+      #slide-2:target ~ .image-container {
+        left: -500px;
+      }
+      #slide-3:target ~ .image-container {
+        left: -1000px;
+      }
+      .buttons {
+        position: relative;
+        top: -20px;
+      }
+      .buttons a {
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        border-radius: 50px;
+        background-color: lightgreen;
+      }
+      #slide{
+        transform: translateY(160px);
+        position: absolute;
+        background-color:blue;
+        color:black;
+      }
+      #slides{
+        transform: translate(0px,160px);
+        float: inline-end;
+        background-color: blue;
+        color:black;
+      }
+      nav{
+        position: sticky;
+        top:0px;
+        z-index: 1;
+        margin-top: 0;
+      }
+      #topbar{
+        margin-bottom: 0px;
+      }
+      #box1{
+        background-color: yellow;
+      }
+      #box2{
+        background-color: rgba(0, 0, 255, 0.639);
+      }
+      #box3{
+        background-color: aqua;
+      }
+
+      @media screen and (min-width:320px) and (max-width:900px) {
+        #topbar{
+            font-size: 11px;
+            padding-left: 8px;
+            color: black;
+        }
+        #none{
+            transform: translate(150px,-15px);
+            font-size: 11px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+        }
+        #petrol{
+            transform: translate(40px,50px);
+            font-size: 30px;
+            font-style: italic;
+        }
+        #button1{
+            color:green;
+            transform: translate(45px,100px);
+            font-family:cursive;
+        }
+        #small{
+            transform: translateX(-20px);
+        }
+        #line{
+            padding:3px;
+        }
+        #lgo{
+            width: 145px;
+            transform: translateY(8px);
+        }
+        #para1{
+            font-size: 11px;
+            transform: translate(-5px,-17px);
+        }
+        #img2{
+            transform: translateX(-6px);
+        }
+        #img3{
+            transform: translate(30px,120px);
+            padding-bottom: 50px;
+        }
+        #foot{
+            text-align: center;
+        }
+        #btn2{
+            transform: translateX(-40px);
+        }
+        #phone{
+            transform: translate(-10px);
+            margin-top: 10px;
+        }
+        #contact{
+            transform: translateY(30px);
+        }
+        .slide{
+            width: 499px;
+            /* transform: translateX(-20px); */
+        }
+        #slides{
+            width:180px;
+        }
+        #slide-1:target ~ .image-container {
+        left:0px;
+      }
+      #slide-2:target ~ .image-container {
+        left: -499px;
+      }
+      #slide-3:target ~ .image-container {
+        left: -999px;
+      }
+      div.buttons{
+        transform: translateX(0px);
+      }
+      #box3{
+        transform: translateY(10px);
+      }
+      #box2{
+        margin-top: 10px;
+      }
+      }
+
+
+      /* @media only screen
+      and (min-device-width:1370px)
+      and (max-device-width:1610px)
+      {
+        #none{
+            transform: translateX(100px);
+        }
+        #para1{
+            transform: translateX(-100px);
+        }
+        #slide,#img1,#slides{
+            width:1100px;
+
+        }
+      } */
+     
+    </style>
+</head>
+<body>
+    <header id="head">
+        <div id="head"><p id="topbar">info@gmail.com +919794355 <p id="para1">Follow us:<a href="https://www.instagram.com/"><i class="fa fa-instagram pl-3 pr-3" aria-hidden="true"></i></a><a href="https://web.whatsapp.com/"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></i>
+        <a href="https://www.youtube.com/"> <i class="fa fa-youtube-play pl-3" aria-hidden="true"></i></a></i><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter pl-3" aria-hidden="true"></i></a></i>
+
+        </p>
+        </div>
+        
+    </header>
+    <nav id="logo">
+        <img src="login-360-new-logo-2.png" id="lgo">
+        <ul type="none"id="none" class="mr-5">
+            <li id="line"><a href="#head">Home</a></li>
+            <li id="line"><a href="#para2">About</a></li>
+            <li id="line"><a href="#contact">ContactUs</a></li>
+            <li id="line"><a href="file:///C:/Users/ELCOT/Desktop/LOGIN%20360%20COACHING/formss.html">Login</a></li>
+        </ul>
+    </nav>
+        <a id="slide" class="prev" onclick="imgslide()"href="#">&#10094;</a>
+        <img id="img1" src="1233.jpg">
+        <a id="slides" class="prev" onclick="imgslide()"href="#">&#10095;</a>
+        <div id="image1">
+        <h1 id="petrol">Petrolium Product</h1>
+        <button id="button1">Know More</button>
+        <button id="button1">Contact Us</button>
+        </div>
+    <div>
+        <p id="para2">About</p>
+    </div>
+    <div class="row" id="row">
+        <div class="col-md-6"><h2>Welcome to RGCX DMCC</h2><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam porro tempore voluptatem iure officiis corrupti modi! Excepturi cupiditate tempore illum. Alias consectetur pariatur earum consequatur distinctio iure perferendis quasi voluptatum iusto animi suscipit quis, voluptates reprehenderit recusandae magni velit accusamus illo est fuga voluptate, quidem libero tempora maxime laudantium! Odit?</p></div>
+        <div class="col-md-6 text-center"><img id="img2" src="images1.jpg"> </div>
+    </div>
+    <div class="row" id="row">
+        <div class="col-md-4" id="box1"><h1>01</h1><h3>why choose us</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore molestiae laboriosam cupiditate perspiciatis eius nesciunt cumque hic voluptates temporibus labore?</p></div>
+        <div class="col-md-4" id="box2"><h1>02</h1><h3>Our Mission</h3><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut quod neque sapiente saepe iure dolorum id odio iste eos excepturi.</p></div>
+        <div class="col-md-4" id="box3"><h1>03</h1><h3>Our Vision</h3><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt iure ipsa velit error, perspiciatis quis natus explicabo placeat voluptatum consectetur.</p></div>
+    </div>
+    <div class="row " id="img3">
+       <div class="col-md-4"><img src="images1.jpg"></div>
+       <div class="col-md-4"><img src="images1.jpg"></div>
+       <div class="col-md-4"><img src="images1.jpg"></div>
+    </div>
+
+
+
+
+
+    <div id="bg" class="pt-4">
+        <div class="bg-info" id="bg2">
+            <h2 class="text-center" id="text1">FACTS & QUESTIONS</h2>
+
+            <p class="text-center" id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci</p>
+
+            <details class="details-example">
+                <summary class="text-center" id="summary3">What factors should i consider when purchasing homeowners insurance know?</summary>
+                <ul type="none">
+                    <li id="small" class="bg-light text-center" >Lorem ipsum dolor  sequi culpa voluptatum enim molestiae, odit harum, qui, optio delectus dolore animi quidem blanditiis pariatur non. Adipisci, aut inventore!</li>
+                </ul>
+            </details>
+
+            <details class="details-example">
+                <summary class="text-center" id="summary3">where and when is my personal property acovered and this is be an beggining?</summary>
+                <ul type="none">
+                    <li id="small" class="bg-light text-center" >Lorem ipsum dolor sit amet consecteturoluptatum enim molestiae, odit harum, qui, optio delectus dolore animi quidem blanditiis pariatur non. Adipisci, aut inventore!</li>
+                </ul>
+            </details>
+
+            <details class="details-example" id="summary3">
+                <summary class="text-center">where and when is my personal property a covered how is started in the index?</summary>
+                <ul type="none">
+                    <li id="small" class="bg-light text-center" >Lorem ipsum dolor sit amet i an and culpa voluptatum enim molestiae, odit harum, qui, optio delectus dolore animi quidem blanditiis pariatur non. Adipisci, aut inventore!</li>
+                </ul>
+            </details>
+    </div>
+
+    
+
+
+    <h2 class="text-center text-danger pb-4" id="contact">Contact us</h2>
+    <div class="row">
+    <div class="col-md-6 bg-success" id="address">
+        <p class="pb-4"><i class="fa fa-home" style="font-size:36px"></i>
+            9/7,kezh street,<br>Kanchipuram 631501<br> Near RR complex</p>
+        <p class="pb-4"><i class="fa fa-phone" style="font-size:40px"></i></i>+9123334244</p>
+        <p><i class="fa fa-envelope p-3" style="font-size:38px"></i>info@gmail.com</p>
+</div>
+<div class="col-md-6 bg-dark" style="height:fit-content" id="foot">
+    <h1>Get in Touch</h1>
+    <input class="mr-3 " type="text" style="width:200px;" placeholder="Full Name*">
+    <input type="text" class="ml-1" style="width:200px;"  placeholder="Phone Number*" id="phone">
+    <input type="text" class="mt-4" style="width:90%"  placeholder="Enter your email*">
+    <input type="text" class="mt-4 pb-5" style="width:90%;"  placeholder="Message">
+    <p class="mt-4">Enter the answer for (3+2)=? (if you are not a robot)</p>
+    <input type="text" style="width:90%;height:30%"><br>
+    <button class="bg-primary mt-4 mb-4" style="width:250px" id="btn2">Send</button>
+</div>
+</div>
+
+
+<div class="slider">
+  <span id="slide-1"></span>
+  <span id="slide-2"></span>
+  <span id="slide-3"></span>
+  <div class="image-container">
+    <img src="thank.jpg" class="slide" width="500" height="300" />
+    <img src="thank.jpg" class="slide" width="500" height="300" />
+    <img src="thank.jpg" class="slide" width="500" height="300" />
+  </div>
+  <div class="buttons">
+    <a href="#slide-1"></a>
+    <a href="#slide-2"></a>
+    <a href="#slide-3"></a>
+   
+    <script>
+        var slideimg=["1233.jpg","36 Beautiful Big Background Image Website Designs - Copy.jpg","thank.jpg"];
+        var index=0;
+        var duration=1000;
+
+        function imgslide(){
+            document.getElementById("img1").src=slideimg[index];
+            index++;
+
+            if(index==slideimg.length){index=0;}
+            setTimeout("imgslide",duration);
+                
+        }
+
+        imgslide();
+    </script>
+</body>
+</html>
